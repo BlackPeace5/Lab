@@ -1,29 +1,71 @@
 <?php
-class C {
-
+// Линейное уравнение a*x + b = 0
+class Linear {
+	
+	protected $x;
+	
+	public function __construct($result = null) {
+		$this->x = $result; 
+	}
+		
+	public function getX() {
+		return $this->x;
+	}
+		
+	public function setX($num) {
+		$this->x = $num;
+	}
+		
+	public function linearEquation($a, $b) {
+		if($a != 0){
+			$this->x = ($b * (-1))/$a;
+			return $this->x; 
+		} else {
+			return false;
+		}
+	}
 }
-class A extends C {
-	public $obj4;
-	public $obj5;
-		public function __construct(C:$obj4, C:$obj5){
-			$this->obj4=$obj4;
-			$this->obj5=$obj5;
+
+// Квадратное уравнение ax^2+bx+c
+class Square extends Linear {
+	
+		public function __construct($x){
+			parent::__construct($x);
+		}
+		//Добавить решение линейного уравнения, если а = 0
+		// Нахождение дискириминанта
+		protected function findDisc($a, $b, $c){
+		    return ($b * $b) - 4 * $a * $c;
+		}
+		
+		// Нахождение корней уравнения
+		public function discEquation($a, $b, $c) {
+		    if($a != 0){
+				$disc = $this->findDisc($a, $b, $c);
+
+				if($disc > 0) {
+					$x1 = ($b * (-1) + sqrt($disc))/(2 * $a);
+					$x2 = ($b * (-1) - sqrt($disc))/(2 * $a);
+					$this->x = Array($x1, $x2);
+				} elseif($disc == 0) {
+					$this->x = ($b * (-1))/(2 * $a);
+				} else {
+					$this->x = false;
+				}
+			
+				return $this->x;
+			} else{
+				$this->linearEquation($a, $b);
+			}   
 		}
 }
+/*
+class B extends A {
 
-class B extends A{
-	public $obj2;
-		public function __construct(C:$obj2, C:$obj4, C:$obj5){
-			parent::__construct($obj4, $obj5);
-			$this->obj2=$obj2;
-		}
 }
+*/
+$lineareq = new Linear();
+$lineareq->linearEquation(3, 9);
 
-
-
-$obj5 = new class C();
-$obj4 = new class C();
-$obj3 = new class C();
-$obj2 = new class C();
-$obj6 = new class A($obj4, $obj5);
-$obj1 = new class B($obj2, $obj3, $obj6);
+$sqrteq = new Square(null);
+$sqrteq->discEquation(0,6,9);
