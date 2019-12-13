@@ -19,9 +19,13 @@ class Linear {
 	public function linearEquation($a, $b) {
 
 			if($a != 0){
+				MyLog::log("This linear equation");
 				$this->x =($b * (-1))/$a;
 				return $this->x; 
-			}
+			} 
+			
+			throw new RuntimeException("Takoye uravneniye ne sushchestvuyet \n");
+
 	}
 }
 

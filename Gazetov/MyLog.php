@@ -15,6 +15,6 @@ Class MyLog extends LogAbstract implements LogInterface {
 	}
 	
 	public function _write() {
-		echo implode("\n", ;$this->log);
+		echo implode("\n", MyLog::Instance()->log);
 	}
 }

@@ -12,6 +12,7 @@ Class Square extends Linear implements EquationInterface {
 		
 	public function solve($a, $b, $c) {
 		    if($a != 0){   
+				MyLog::log("This is a quadratic equation");
 				$disc = $this->findDisc($a, $b, $c);
 
 				if($disc > 0) {
@@ -26,7 +27,11 @@ Class Square extends Linear implements EquationInterface {
 					);
 					return $this->x;
 				}
+				
+				throw new GazetovException("Takoye uravneniye ne imeyet resheniy\n");
 			} 
+			
 			return $this->linearEquation($a, $b);
+
 		}	
 }

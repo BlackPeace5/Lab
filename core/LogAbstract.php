@@ -2,9 +2,9 @@
 namespace core;
 abstract class LogAbstract {
 	protected static $i;
-
+	
 	private function __construct() {
-
+	
 	}
 	/**
 	*@return static
@@ -15,8 +15,8 @@ abstract class LogAbstract {
 		}
 		return static::$i;
 	}
-
+	
 	protected $log = array();
-
+	
 	abstract public function _write();
 }
