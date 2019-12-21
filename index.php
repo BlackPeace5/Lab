@@ -1,5 +1,5 @@
 <?php
-
+define("BASEURI", __DIR__);
 ini_set("display_errors", 1); error_reporting (-1); 
 use gazetov\GazetovException;
 use gazetov\MyLog;
@@ -7,15 +7,13 @@ use gazetov\Linear;
 use gazetov\Square;
 
 
-include 'core/EquationInterface.php';
-include 'core/LogInterface.php';
-include 'core/LogAbstract.php';
-include 'gazetov/GazetovException.php';
-include 'gazetov/MyLog.php';
-include 'gazetov/Linear.php';
-include 'gazetov/Square.php';
-
-
+include BASEURI . '/core/EquationInterface.php';
+include BASEURI . '/core/LogInterface.php';
+include BASEURI . '/core/LogAbstract.php';
+include BASEURI . '/gazetov/GazetovException.php';
+include BASEURI . '/gazetov/MyLog.php';
+include BASEURI . '/gazetov/Linear.php';
+include BASEURI . '/gazetov/Square.php';
 
 	try{
 		echo 'Enter a, b, c' . "\n";
