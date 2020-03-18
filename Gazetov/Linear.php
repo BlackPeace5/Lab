@@ -24,7 +24,7 @@ class Linear {
 				return $this->x; 
 			} 
 			
-			throw new RuntimeException("Takoye uravneniye ne sushchestvuyet \n");
+			throw new GazetovException("Takoye uravneniye ne sushchestvuyet \n");
 
 	}
 }
