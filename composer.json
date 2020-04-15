@@ -1,0 +1,37 @@
+{
+    "name": "blackpeace5/lab",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "blackpeace5",
+            "email": "blackpeace5@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/BlackPeace5/Lab2.git"
+        },
+	      {
+            "type": "package",
+            "package": {
+                "name": "rok9ru/trpo-core",
+		        "version": "@dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/rok9ru/trpo-core.git",
+		            "reference": "master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "blackpeace5/lab2": "@dev",
+        "ext-readline": "*"
+    },
+    "autoload": {
+	     "psr-4": {"core\\": "./vendor/rok9ru/trpo-core/"}
+    }
+}

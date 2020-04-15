@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f3934f395e5c0108a0f5dd06ce9322c8",
+    "packages": [
+        {
+            "name": "blackpeace5/lab2",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BlackPeace5/Lab2.git",
+                "reference": "b0dda7729386e5e11299fb9597fe882e54e08d20"
+            },
+            "require": {
+                "rok9ru/trpo-core": "@dev"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Gazetov\\": "."
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "BlackPeace5",
+                    "email": "BlackPeace5@gmail.com"
+                }
+            ],
+            "time": "2020-04-15T13:38:07+00:00"
+        },
+        {
+            "name": "rok9ru/trpo-core",
+            "version": "@dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rok9ru/trpo-core.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "time": "2019-11-23T10:22:55+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "blackpeace5/lab2": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "ext-readline": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}
